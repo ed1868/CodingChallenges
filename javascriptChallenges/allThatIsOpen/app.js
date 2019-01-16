@@ -37,25 +37,42 @@
 // Test.assertEquals(isBalanced("Sensei says -yes-!", "--"), true);
 // Test.assertEquals(isBalanced("Sensei -says no!", "--"), false);
 
+isBalance = (s, caps) => {
+  console.log('THIS IS S-----', s);
+  console.log('THIS IS CAPS-----', caps);
 
-function isBalanced(s, caps) {
-  let jury = false;
+  const sSplit = s.split('');
+  console.log('------STR-----', sSplit);
 
-  strToSplit = caps.split();
-  console.log(strToSplit);
-
-
-  function compare(string, strToSplit) {
-    console.log(string[0], string[string.length - 1]);
-
-    for (let pair = 0; pair < strToSplit.length; pair++) {
-      if (string[0] == strToSplit[pair][0] && string[string.length - 1] == strToSplit[pair][1]) {
-        jury = true;
-        return jury;
-      }
+  for (let i = 0; i < sSplit.length; i++) {
+    if (sSplit[i] === caps[0]) {
+      console.log('item being tested now----', sSplit[i]);
+      console.log('---yes----');
     }
   }
+};
 
-  compare(s, strToSplit);
-  return jury;
-}
+isBalance('Sensei [says] yes!(', '()[]');
+
+
+// function isBalanced(s, caps) {
+//   let jury = false;
+
+//   strToSplit = caps.split();
+//   console.log(strToSplit);
+
+
+//   function compare(string, strToSplit) {
+//     console.log(string[0], string[string.length - 1]);
+
+//     for (let pair = 0; pair < strToSplit.length; pair++) {
+//       if (string[0] == strToSplit[pair][0] && string[string.length - 1] == strToSplit[pair][1]) {
+//         jury = true;
+//         return jury;
+//       }
+//     }
+//   }
+
+//   compare(s, strToSplit);
+//   return jury;
+// }

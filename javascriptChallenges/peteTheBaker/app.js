@@ -25,4 +25,5 @@
 
 function cakes(recipe, available) {
   // TODO: insert code
+  console.log(Object.keys(recipe));
 }
