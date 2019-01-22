@@ -22,8 +22,17 @@
 //     Test.assertEquals(cakes(recipe, available), 0, 'Wrong result for example #2');
 //   });
 // });
-
-function cakes(recipe, available) {
-  // TODO: insert code
-  console.log(Object.keys(recipe));
+const cakes = (recipe, available) => {
+  const rKeys = Object.keys(recipe)
+  console.log(rKeys);
+  const aKeys = Object.keys(available);
+    console.log(aKeys);
+  let finalProduct = Infinity
+  if (!rKeys.every(e => aKeys.includes(e))) return 0
+  rKeys.forEach(key => {
+    if (available[key] / recipe[key] <= finalProduct) {
+      finalProduct = available[key] / recipe[key]
+    }
+  })
+  return Math.floor(finalProduct)
 }
