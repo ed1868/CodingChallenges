@@ -37,42 +37,84 @@
 // Test.assertEquals(isBalanced("Sensei says -yes-!", "--"), true);
 // Test.assertEquals(isBalanced("Sensei -says no!", "--"), false);
 
-isBalance = (s, caps) => {
-  console.log('THIS IS S-----', s);
-  console.log('THIS IS CAPS-----', caps);
+//THIS PASSED ALL TEST BUT ONE
 
-  const sSplit = s.split('');
-  console.log('------STR-----', sSplit);
+function isBalanced(s, caps) {
+  let jury = false;
 
-  for (let i = 0; i < sSplit.length; i++) {
-    if (sSplit[i] === caps[0]) {
-      console.log('item being tested now----', sSplit[i]);
-      console.log('---yes----');
+  strToSplit = caps.split();
+  console.log(strToSplit);
+
+
+  function compare(string, strToSplit) {
+    console.log(string[0], string[string.length - 1]);
+
+    for (let pair = 0; pair < strToSplit.length; pair++) {
+      if (string[0] == strToSplit[pair][0] && string[string.length - 1] == strToSplit[pair][1]) {
+        jury = true;
+        return jury;
+      }
     }
   }
-};
 
-isBalance('Sensei [says] yes!(', '()[]');
-
-
-// function isBalanced(s, caps) {
-//   let jury = false;
-
-//   strToSplit = caps.split();
-//   console.log(strToSplit);
+  compare(s, strToSplit);
+  return jury;
+}
 
 
-//   function compare(string, strToSplit) {
-//     console.log(string[0], string[string.length - 1]);
+//THIS PASSED ALL TEST BUT TWO
 
-//     for (let pair = 0; pair < strToSplit.length; pair++) {
-//       if (string[0] == strToSplit[pair][0] && string[string.length - 1] == strToSplit[pair][1]) {
-//         jury = true;
-//         return jury;
-//       }
-//     }
-//   }
+isBalanced = (s,caps) =>{
+  let capSplit = caps.split('');
+  let capOpener = capSplit[0];
+  let capCloser = capSplit[1];
+  let secondOpen = capSplit[2];
+  let secondCloser = capSplit[3];
+  let firstArg = true;
+  let secondArg = true;
+  let finalProduct = false;
+ console.log(caps.length);
+ if(capOpener === capCloser && s.includes(capOpener)){
+     finalProduct = true;
+ }
+ if(caps.length == 2){
+   if(s.includes(capOpener) && s.includes(capCloser)){
+     firstArg=true;
+   }else{
+     firstArg=false;
+   }
+ }
 
-//   compare(s, strToSplit);
-//   return jury;
-// }
+ if(caps.length >= 3){
+   if(s.includes(secondOpen) && s.includes(secondCloser)){
+     secondArg=true;
+   }else{
+     secondArg=false;
+   }
+ }
+
+ if(caps.length == 2 && firstArg){
+   console.log('wut--', caps.length);
+   console.log('wutt---',firstArg);
+   finalProduct=true;
+   
+ }
+
+ if(caps.length >= 3 && secondArg){
+   if(firstArg && secondArg){
+    finalProduct = true; 
+   }else{
+     finalProduct=false;
+   }
+ }
+
+ console.log('FIRST ARGUMENT ------', firstArg);
+ console.log('SECOND ARGUMENT -----', secondArg);
+  console.log(capSplit);
+  console.log(capOpener);
+  console.log(capCloser);
+  console.log(secondOpen);
+  console.log(secondCloser);
+
+ console.log(finalProduct);
+}
