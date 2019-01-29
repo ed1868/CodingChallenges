@@ -51,6 +51,7 @@ function isBalanced(s, caps) {
 
     for (let pair = 0; pair < strToSplit.length; pair++) {
       if (string[0] == strToSplit[pair][0] && string[string.length - 1] == strToSplit[pair][1]) {
+
         jury = true;
         return jury;
       }
