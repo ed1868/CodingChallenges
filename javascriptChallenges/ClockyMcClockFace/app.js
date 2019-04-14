@@ -36,3 +36,4 @@ const whatTimeIsIt = function (angle) {
   }
   return `${hour}:${min}`;
 };
+
