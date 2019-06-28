@@ -17,3 +17,48 @@ function evenNumbers(array, number) {
   });
   return newArray.splice(-number);
 }
+
+function evenNumbers(array, number) {
+  const newArray = [];
+
+  array.map((e) => {
+    if (e % 2 == 0) {
+      newArray.push(e);
+    }
+  });
+  return newArray.splice(-number);
+}
+
+function evenNumbers(array, number) {
+  const newArray = [];
+
+  array.map((e) => {
+    if (e % 2 == 0) {
+      newArray.push(e);
+    }
+  });
+  return newArray.splice(-number);
+}
+
+function evenNumbers(array, number) {
+  const newArray = [];
+
+  array.map((e) => {
+    if (e % 2 == 0) {
+      newArray.push(e);
+    }
+  });
+  return newArray.splice(-number);
+}
+
+function evenNumbers(array, number) {
+  const newArray = [];
+
+  array.map((e) => {
+    if (e % 2 == 0) {
+      newArray.push(e);
+    }
+  });
+  return newArray.splice(-number);
+}
+
