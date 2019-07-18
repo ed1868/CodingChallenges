@@ -12,3 +12,6 @@ numOne = numOne - numTwo;
 }
 
 sergioCodes(numOne,numTwo);
+
+
+console.log(`${numOne} and ${numTwo}`);
