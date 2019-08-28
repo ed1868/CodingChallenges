@@ -1,0 +1,6 @@
+mutations = () =>{
+
+}
+
+
+mutations(['hello', 'jello']);
