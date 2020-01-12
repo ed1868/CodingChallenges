@@ -16,9 +16,9 @@
 // All inputs will be in uppercase and only letters A-Z.
 // Good luck!
 
-function checkNucleotides(sequence) {
+checkNucleotides = sequence => {
   //Your code here
-} 
+};
 
 checkNucleotides("AUAUA");
 // , "Valid Sequence: AUAUA", checkNucleotides("AUAUA"))
