@@ -17,7 +17,12 @@
 // Good luck!
 
 checkNucleotides = sequence => {
-  //Your code here
+  for (let i = 0; i < sequence.length; i++) {
+    if (!["A", "G", "C", "U"].includes(sequence[i]))
+      return `There is an invalid letter: ${sequence[i]}. At position: ${i +
+        1}`;
+  }
+  return `Valid Sequence: ${sequence}`;
 };
 
 checkNucleotides("AUAUA");
