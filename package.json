@@ -9,6 +9,8 @@
   "author": "Eddie Ruiz",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^5.12.1"
+    "eslint": "^5.12.1",
+    "reverse-md5": "0.0.4",
+    "tape": "^5.0.1"
   }
 }
